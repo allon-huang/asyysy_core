@@ -61,8 +61,6 @@
              <optional>true</optional>
          </dependency>
 
-
-
          <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
          <!--xml处理dom4j start -->
          <dependency>
@@ -112,6 +110,14 @@
          </dependency>
          <!--打包移除自带tomcat start-->
 
+         <!--Java 后端常用代码封装库 syj-minicode start -->
+         <!-- https://mvnrepository.com/artifact/cn.org.zhixiang/syj-minicode -->
+         <dependency>
+             <groupId>cn.org.zhixiang</groupId>
+             <artifactId>syj-minicode</artifactId>
+             <version>0.0.4</version>
+         </dependency>
+         <!--Java 后端常用代码封装库 syj-minicode end-->
      </dependencies>
 
     <build>
