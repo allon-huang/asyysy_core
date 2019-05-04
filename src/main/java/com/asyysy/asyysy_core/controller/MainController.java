@@ -1,6 +1,7 @@
 package com.asyysy.asyysy_core.controller;
 
 
+import com.asyysy.asyysy_core.common.mail.SendmailUtil;
 import com.asyysy.asyysy_core.common.wx.CheckoutUtil;
 import com.asyysy.asyysy_core.model.WxMessage;
 import com.asyysy.asyysy_core.model.WxReplyModel;
@@ -42,6 +43,11 @@ public class MainController {
     @ResponseBody
     @RequestMapping(value = "indexJson")
     public Object indexJson(@RequestParam Map<String,Object> params,HttpServletRequest request){
+        try {
+            SendmailUtil.sendEmail("652820357@qq.com","Test","哈哈");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         DateFormat format1 = new java.text.SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         logger.info("==============================MainController=====调用时间" + format1.format(new Date()) + "=indexJson=========params：" + params.toString());
         List<WxReplyModel> wxReplys =  wxReplyModelService.selectWxReplyModelList();
