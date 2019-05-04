@@ -44,7 +44,7 @@ public class MainController {
     @RequestMapping(value = "indexJson")
     public Object indexJson(@RequestParam Map<String,Object> params,HttpServletRequest request){
         try {
-            SendmailUtil.sendEmail("652820357@qq.com","Test","哈哈");
+            SendmailUtil.sendEmail("731000534@qq.com","Test","哈哈");
         } catch (Exception e) {
             e.printStackTrace();
         }
