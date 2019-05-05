@@ -1,14 +1,13 @@
 package com.asyysy.asyysy_core.common.mail;
 
+import com.sun.mail.util.MailSSLSocketFactory;
+
 import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
-import com.sun.mail.util.MailSSLSocketFactory;
-
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;

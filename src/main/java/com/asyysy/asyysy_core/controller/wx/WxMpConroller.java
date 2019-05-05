@@ -2,6 +2,7 @@ package com.asyysy.asyysy_core.controller.wx;
 
 
 import com.asyysy.asyysy_core.common.wx.CheckoutUtil;
+import com.asyysy.asyysy_core.common.wx.MessageUtil;
 import com.asyysy.asyysy_core.common.wx.model.TextMeaasge;
 import com.asyysy.asyysy_core.model.WxMessage;
 import com.asyysy.asyysy_core.model.WxReplyModel;
@@ -9,19 +10,11 @@ import com.asyysy.asyysy_core.service.WxMainService;
 import com.asyysy.asyysy_core.service.WxReplyModelService;
 import org.dom4j.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import com.asyysy.asyysy_core.common.wx.*;
-import org.springframework.web.context.support.HttpRequestHandlerServlet;
 
-import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;

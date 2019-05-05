@@ -1,4 +1,4 @@
-package com.asyysy.asyysy_core.config;
+package com.asyysy.asyysy_core.common.config;
 
 import com.asyysy.asyysy_core.intercepter.LoginIntercepter;
 import org.springframework.beans.factory.annotation.Autowired;
