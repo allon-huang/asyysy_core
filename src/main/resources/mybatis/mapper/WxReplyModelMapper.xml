@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.asyysy.core.dao.WxReplyModelDao" >
+<mapper namespace="cn.asyysy.core.mapper.WxReplyModelMapper" >
 
     <resultMap id="BaseResultMapWxReplyModel" type="cn.asyysy.core.model.WxReplyModel" >
         <id column="pkid" property="pkid" jdbcType="INTEGER" />

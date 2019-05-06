@@ -13,7 +13,7 @@ import org.springframework.web.WebApplicationInitializer;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@MapperScan("cn.asyysy.core.dao")
+@MapperScan("cn.asyysy.core.mapper")
 @EnableSyjMiniCode // syj-minicode 注册
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer implements WebApplicationInitializer {

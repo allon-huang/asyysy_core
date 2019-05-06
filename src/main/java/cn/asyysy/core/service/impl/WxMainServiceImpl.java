@@ -2,19 +2,19 @@ package cn.asyysy.core.service.impl;
 
 import cn.asyysy.core.model.WxMessage;
 import cn.asyysy.core.service.WxMainService;
-import cn.asyysy.core.dao.WxMainDao;
+import cn.asyysy.core.mapper.WxMainMapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class WxMainServiceImpl extends ServiceImpl<WxMainDao,WxMessage> implements WxMainService {
+public class WxMainServiceImpl extends ServiceImpl<WxMainMapper,WxMessage> implements WxMainService {
 
     @Autowired
-    private WxMainDao wxMainDao;
+    private WxMainMapper wxMainMapper;
 
     @Override
     public boolean inserWxInCharge(WxMessage wx) {
-        return wxMainDao.inserWxInCharge(wx);
+        return wxMainMapper.inserWxInCharge(wx);
     }
 }

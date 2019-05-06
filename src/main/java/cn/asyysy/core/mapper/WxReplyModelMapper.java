@@ -1,12 +1,11 @@
-package cn.asyysy.core.dao;
+package cn.asyysy.core.mapper;
 
 import cn.asyysy.core.model.WxReplyModel;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public interface WxReplyModelDao extends BaseMapper<WxReplyModel> {
+public interface WxReplyModelMapper extends BaseMapper<WxReplyModel> {
     /**
      * 查询回复模板
      * @param keyword
