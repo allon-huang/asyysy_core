@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.asyysy.core.dao.WxMainDao" >
+<mapper namespace="cn.asyysy.core.dao.WxMainDao" >
 
-    <resultMap id="BaseResultMapWxMain" type="com.asyysy.core.model.WxMessage" >
+    <resultMap id="BaseResultMapWxMain" type="cn.asyysy.core.model.WxMessage" >
         <id column="pkid" property="pkid" jdbcType="INTEGER" />
         <result column="open_id" property="openId" jdbcType="VARCHAR" />
         <result column="message" property="message" jdbcType="VARCHAR" />
@@ -17,7 +17,7 @@
     <sql id="Base_Column_List_Un_Pkid_WxMessage" >
         open_id, message,all_message, type,date
     </sql>
-    <insert id="inserWxInCharge" parameterType="com.asyysy.core.model.WxMessage">
+    <insert id="inserWxInCharge" parameterType="cn.asyysy.core.model.WxMessage">
         insert into
         wx_in_charge(<include refid="Base_Column_List_Un_Pkid_WxMessage" /> )
         values(#{openId},#{message},#{allMessage},#{type},#{date})
