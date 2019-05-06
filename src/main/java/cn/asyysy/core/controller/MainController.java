@@ -5,6 +5,8 @@ import cn.asyysy.core.model.WxReplyModel;
 import cn.asyysy.core.service.WxReplyModelService;
 import cn.asyysy.core.common.mail.SendmailUtil;
 import cn.asyysy.core.service.WxMainService;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -36,6 +38,12 @@ public class MainController {
         List<WxReplyModel> wxReplys =  wxReplyModelService.selectWxReplyModelList();
         request.setAttribute("list",wxReplys);
         logger.info(env.getProperty("wx_token"));
+        /*
+            EntityWrapper<WxReplyModel> wrapper = new  EntityWrapper<WxReplyModel>();
+            wrapper.setEntity(new WxReplyModel());
+            List<WxReplyModel> aaa =  wxReplyModelService.selectList(wrapper);
+            request.setAttribute("list",aaa);
+         */
         return  "index";
     }
 

@@ -1,10 +1,11 @@
 package cn.asyysy.core.service;
 
 import cn.asyysy.core.model.WxReplyModel;
+import com.baomidou.mybatisplus.service.IService;
 
 import java.util.List;
 
-public interface WxReplyModelService {
+public interface WxReplyModelService extends IService<WxReplyModel> {
     /**
      * 查询回复模板
      * @param keyword
