@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  * @since 2019-05-08
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
     Logger logger = Logger.getLogger("UserController");
 

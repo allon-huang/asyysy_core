@@ -24,10 +24,15 @@ public class LoginIntercepter extends HandlerInterceptorAdapter {
         //每一个项目对于登陆的实现逻辑都有所区别，我这里使用最简单的Session提取User来验证登陆。
         HttpSession session = request.getSession();
         Object user = session.getAttribute("user");
-        logger.info("####################" + request.getRequestURL() + "user:" + user);
+        logger.info("####################" + request.getRequestURL() + "|user:" + user);
+        String requestUrl = request.getRequestURL().toString();
         if(null == user){
-            //logger.info("------:正在跳转到login页面...");
-            //response.sendRedirect(request.getContextPath()+"/index");
+            /*if(requestUrl.contains("/api/user")){
+                response.sendError(1,"用户未登录");
+            }else{
+                logger.info("------:正在跳转到login页面...");
+                response.sendRedirect(request.getContextPath()+"/index");
+            }*/
             response.sendError(1,"用户未登录");
             return false;
         }

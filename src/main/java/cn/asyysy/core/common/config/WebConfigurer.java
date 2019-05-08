@@ -35,8 +35,8 @@ public class WebConfigurer implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         // addPathPatterns 需要拦截的路径/** 为全部    excludePathPatterns 拦截路径下排除的路径
         registry.addInterceptor(loginIntercepter)
-                .addPathPatterns("/user/**")
-                .excludePathPatterns(Arrays.asList("/user/login"));
+                .addPathPatterns("/**")
+                .excludePathPatterns(Arrays.asList("/api/user/login","/index","/error"));
         // 注册Token拦截器
         //registry.addInterceptor(new ApiSignatureInterceptor());
         //registry.addInterceptor(new JwtInterceptor()) .addPathPatterns("/tp_store/logout");
