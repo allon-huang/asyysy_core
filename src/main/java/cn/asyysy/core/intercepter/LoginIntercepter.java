@@ -26,8 +26,9 @@ public class LoginIntercepter extends HandlerInterceptorAdapter {
         Object user = session.getAttribute("user");
         logger.info("####################" + request.getRequestURL() + "user:" + user);
         if(null == user){
-            logger.info("------:正在跳转到login页面...");
-            response.sendRedirect(request.getContextPath()+"/index");
+            //logger.info("------:正在跳转到login页面...");
+            //response.sendRedirect(request.getContextPath()+"/index");
+            response.sendError(1,"用户未登录");
             return false;
         }
         return true;

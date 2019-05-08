@@ -3,6 +3,7 @@ package cn.asyysy.core.service.impl;
 import cn.asyysy.core.model.User;
 import cn.asyysy.core.mapper.UserMapper;
 import cn.asyysy.core.service.UserService;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +18,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
+    @Override
+    public Page<User> selectPage(User user, Page<User> page) {
+
+        return null;
+    }
 }

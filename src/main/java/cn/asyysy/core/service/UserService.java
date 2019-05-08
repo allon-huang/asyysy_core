@@ -1,6 +1,7 @@
 package cn.asyysy.core.service;
 
 import cn.asyysy.core.model.User;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
 
 /**
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface UserService extends IService<User> {
 
+    Page<User> selectPage(User user, Page<User> page);
 }
