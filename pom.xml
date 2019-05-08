@@ -112,11 +112,11 @@
 
          <!--Java 后端常用代码封装库 syj-minicode start -->
          <!-- https://mvnrepository.com/artifact/cn.org.zhixiang/syj-minicode -->
-         <dependency>
+         <!--<dependency>
              <groupId>cn.org.zhixiang</groupId>
              <artifactId>syj-minicode</artifactId>
              <version>0.0.4</version>
-         </dependency>
+         </dependency>-->
          <!--Java 后端常用代码封装库 syj-minicode end-->
 
          <!--发送邮件-->
@@ -131,11 +131,53 @@
              <artifactId>mybatis-plus-boot-starter</artifactId>
              <version>2.3</version>
          </dependency>
+         <!--mybatis-plus自动生成代码-->
+         <dependency>
+             <groupId>com.baomidou</groupId>
+             <artifactId>mybatis-plus-generator</artifactId>
+             <version>3.1.1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.apache.velocity</groupId>
+             <artifactId>velocity-engine-core</artifactId>
+             <version>2.0</version>
+         </dependency>
          <!--<dependency>
              <groupId>org.slf4j</groupId>
              <artifactId>slf4j-log4j12</artifactId>
              <version>1.7.2</version>
          </dependency>-->
+
+         <!--JJWT库-->
+        <!-- <dependency>
+             <groupId>io.jsonwebtoken</groupId>
+             <artifactId>jjwt</artifactId>
+             <version>0.6.0</version>
+         </dependency>-->
+<!--
+         <dependency>
+             <groupId>net.sf.json-lib</groupId>
+             <artifactId>json-lib</artifactId>
+             <version>2.4</version>
+         </dependency>
+-->
+         <dependency>
+             <groupId>com.auth0</groupId>
+             <artifactId>java-jwt</artifactId>
+             <version>3.4.0</version>
+         </dependency>
+
+         <!--<dependency>
+             <groupId>commons-codec</groupId>
+             <artifactId>commons-codec</artifactId>
+         </dependency>-->
+         <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+         <dependency>
+             <groupId>commons-lang</groupId>
+             <artifactId>commons-lang</artifactId>
+             <version>2.6</version>
+         </dependency>
+
 
      </dependencies>
 

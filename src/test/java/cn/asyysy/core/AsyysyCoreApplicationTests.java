@@ -19,7 +19,7 @@ public class AsyysyCoreApplicationTests {
 
     @Test
     public void mapTest() {
-        int aHundredMillion = 10000000;
+        int aHundredMillion = 500;
 
         Map<Integer, Integer> map = new HashMap<>();
 

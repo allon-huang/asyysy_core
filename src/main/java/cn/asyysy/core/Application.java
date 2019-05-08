@@ -1,7 +1,7 @@
 package cn.asyysy.core;
 
-import cn.org.zhixiang.annotation.EnableSyjMiniCode;
-import cn.org.zhixiang.entity.IdField;
+//import cn.org.zhixiang.annotation.EnableSyjMiniCode;
+//import cn.org.zhixiang.entity.IdField;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @MapperScan("cn.asyysy.core.mapper")
-@EnableSyjMiniCode // syj-minicode 注册
+//@EnableSyjMiniCode // syj-minicode 注册
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer implements WebApplicationInitializer {
 
@@ -31,7 +31,7 @@ public class Application extends SpringBootServletInitializer implements WebAppl
     }
 
 
-    @Bean
+   /* @Bean
     public IdField idField() {
         Map<String,String> map=new ConcurrentHashMap<>();
         map.put("WxMessage","pkid");
@@ -40,6 +40,6 @@ public class Application extends SpringBootServletInitializer implements WebAppl
         IdField idField=new IdField();
         idField.setMap(map);
         return idField;
-    }
+    }*/
 }
 
