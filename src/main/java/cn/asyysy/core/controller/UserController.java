@@ -6,6 +6,9 @@ import cn.asyysy.core.model.User;
 import cn.asyysy.core.service.UserService;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.apache.commons.lang.StringUtils;
@@ -26,6 +29,7 @@ import java.util.logging.Logger;
  * @since 2019-05-08
  */
 @RestController
+@Api("swaggerDemoController相关的api")
 @RequestMapping("/api/user")
 public class UserController {
     Logger logger = Logger.getLogger("UserController");
@@ -107,6 +111,8 @@ public class UserController {
         return new JsonResult(JsonResult.SUCCESS,"用户列表",pageResult);
     }
 
+    @ApiOperation(value = "用户登录", notes = "用户登录")
+    @ApiImplicitParam(name = "userIn", value = "用户实体", paramType = "path", required = true, dataType = "Integer")
     @PostMapping("login")
     public Object login(HttpServletRequest request, HttpServletResponse response, @RequestBody User userIn){
         logger.info("user/login");
